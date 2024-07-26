@@ -1,0 +1,35 @@
+$grid-breakpoints: (
+  phone: 576px,
+  tablet: 768px,
+  tablet-landscape-up: 992px,
+  desktop-up: 1200px,
+  big-desktop-up: 1400px,
+);
+
+@mixin respond($grid-breakpoints) {
+  @if $grid-breakpoints == phone {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $grid-breakpoints == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $grid-breakpoints == tablet-landscape-up {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $grid-breakpoints == desktop-up {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $grid-breakpoints == big-desktop-up {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}

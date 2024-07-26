@@ -1,0 +1,30 @@
+.sectionA{
+    width: 100vw;
+    height: 40rem;
+    
+    &-header{
+        text-align: center;
+        padding: 3rem;
+    }
+}
+.list{
+
+}
+.image-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  &-container{
+    width: 30rem;
+    height: 30rem;
+  }
+}
+.image{
+    width: 100%;
+    height: 100%;
+    transition: all .7s;
+    &:hover{
+        opacity: .8;
+    }
+}

@@ -1,0 +1,35 @@
+.showcase {
+  width: 100vw;
+  height: 100vh;
+  
+  background-image: url(../../data2//pexels-mart-production-7679442.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: last baseline baseline;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10rem;
+  color: #fff;
+  gap: 2rem;
+  &-header-a {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  &-header-b {
+  }
+  &-btn {
+    display: inline-block;
+    width: 10rem;
+    height: 4rem;
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
