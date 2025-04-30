@@ -3,9 +3,10 @@
   height: auto;
   display: grid;
   grid-template-rows: 10rem auto;
-
+ 
   &-header {
     text-align: center;
+    padding: 2rem;
   }
 }
 .women-grid {

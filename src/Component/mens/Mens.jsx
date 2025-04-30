@@ -13,7 +13,7 @@ export default function Mens() {
     <div className="mens">
         <h1 className="mens-header">لباس مردانه </h1>
         <div className="mens-grid">
-             {newarray.map(item=><Cards  image={item.image} name={item.name} key={item.id}  price={item.price} />)}  
+             {newarray.map(item=><Cards  id={item.id} image={item.image} name={item.name} key={item.id}  price={item.price} />)}  
         </div>
         <Footer />
     </div>

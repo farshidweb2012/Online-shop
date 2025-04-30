@@ -12,6 +12,7 @@ export default function Home() {
             <NewBrand />
             <Products />
             <Footer />
+          
         </div>
     )
 }

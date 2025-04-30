@@ -1,16 +1,15 @@
+.mens {
+  display: grid;
+  grid-template-rows: 10rem auto;
 
-.mens{
-    display: grid;
-    grid-template-rows: 8rem auto;
-    &-header{
-        text-align: center;
-        padding: 2rem;
-    }
+  &-header {
+    text-align: center;
+    padding: 2rem;
+  }
 }
-.mens-grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto ;
-    grid-column-gap: 1rem;
-    gap: 2rem;
-    margin: 0 auto;
+.mens-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  margin: 0 auto;
 }

@@ -69,7 +69,7 @@
   }
   &-search-overlay {
     width: 40rem;
-    background-color: transparent;
+    background-color: #fff;
     padding: 2rem;
     border: none;
     color: #000;
@@ -90,6 +90,7 @@
 .navbar-login-link {
   color: #000;
   display: flex;
+  position: relative;
 }
 .overlay-search {
   width: 100vw;
@@ -108,7 +109,7 @@
   visibility: hidden;
   gap: 3rem;
   &-closeIcon {
-    color:#fff;
+    color: #fff;
     width: 5rem;
     height: 5rem;
     background-color: transparent;
@@ -116,4 +117,18 @@
     cursor: pointer;
     padding: 1rem;
   }
+}
+
+.navbar-cart-text {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: red;
+  border-radius: 50%;
+  padding: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

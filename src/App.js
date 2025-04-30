@@ -1,4 +1,3 @@
-
 import "./App.scss";
 import Mens from "./Component/mens/Mens";
 import { Route, Routes } from "react-router-dom";
@@ -10,8 +9,6 @@ import Loign from "./Component/Login/Loign";
 import MYNavbar from "./Component/Nav/MYNavbar";
 
 export default function App() {
-
-
   return (
     <div>
       <MYNavbar />

@@ -5,17 +5,29 @@ import "./navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchInput } from "../../Redux-tolkit/slice/sharedataSlice";
+
 
 export default function MYNavbar() {
   const [overlayvis, setOverlayvis] = useState(false);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const showcaption = totalQuantity ? false : true;
+  const [searchinput,setInput] = useState("");
+  const dispatch =useDispatch();
+
+
+  const handlechange = (e) => {
+   setInput(e.target.value);
+    dispatch(setSearchInput(setSearchInput))
+  };
 
   const showoverlay = () => {
     setOverlayvis(true);
   };
-  const closebox=()=>{
+  const closebox = () => {
     setOverlayvis(false);
-
-  }
+  };
   return (
     <div className="navbar">
       <ul className="navbar-list">
@@ -35,7 +47,6 @@ export default function MYNavbar() {
             زنانه{" "}
           </Link>{" "}
         </li>
-        
       </ul>
 
       <div className="navbar-header">
@@ -49,29 +60,34 @@ export default function MYNavbar() {
           placeholder="جستجو در سایت..."
         />
         <div
-          
           style={
             overlayvis ? { visibility: "visible" } : { visibility: "hidden" }
           }
           className="overlay-search"
         >
+          {/*search input box */}
           <input
             className="navbar-login-search-overlay"
             type="text"
             placeholder="جستجو در سایت..."
-          />
-
-      
-            {" "}
-            <FontAwesomeIcon
+            onChange={handlechange}
+            value={searchinput}
+          />{" "}
+          <FontAwesomeIcon
             onClick={closebox}
-              className="overlay-search-closeIcon"
-              icon={faClose}
-            />{" "}
-      \
+            className="overlay-search-closeIcon"
+            icon={faClose}
+          />{" "}
+          \
         </div>
         <Link className="navbar-login-link" to="/shop">
           <FontAwesomeIcon className="fa-2x" icon={faCartShopping} />
+          <span
+            style={{ visibility: showcaption ? "hidden" : "visible" }}
+            className="navbar-cart-text"
+          >
+            {totalQuantity}
+          </span>
         </Link>
         <Link className="navbar-login-link" to="/login">
           {" "}
